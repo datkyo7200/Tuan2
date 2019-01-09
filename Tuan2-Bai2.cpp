@@ -192,7 +192,7 @@ void GhiDS(ofstream &f,vector<Nhanvien> &dsnv)
 	}
 }
 
-void Menu(){
+void ShowMenu(){
 	cout<<"Phan Thanh Dat 58131284\n\n\n";
 	cout << "1: Them 1 nhan vien." << endl;
 	cout << "2: Xoa 1 nhan vien theo ma nhan vien." << endl;
@@ -213,7 +213,7 @@ int ChonMenu()
 }
 void LuaChon(vector <nv> ds)
 {	
-	Menu();
+	ShowMenu();
 	int select ;
 	cout<<"Nhap vao lua chon cua ban: ";
 	cin>>select;
@@ -241,7 +241,7 @@ void LuaChon(vector <nv> ds)
 			LuaChon(ds);	
 			break;
 		case 5:
-			Ghifile(ds);
+			//Ghifile(ds);
 			cout<<"Da ghi du lieu vao file!"<<endl;
 			LuaChon(ds);
 			break;
@@ -253,14 +253,14 @@ void LuaChon(vector <nv> ds)
 			LuaChon(ds);
 	}	
 }
-void Menu();		
+void ShowMenu();		
 void LuaChon();	
 int ChonMenu(); 
 int main()
 {   
 	vector <nv> employee;
-	nhapDSNV(employee);
-	chon(employee);
+	NhapDSNV(employee);
+	LuaChon(employee);
 		getch();
 }
 
